@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>김대현 — 이력서</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<style>
+  :root{
+    --ink:#16161a; --ink-2:#3d3d44; --ink-3:#73737c; --line:#e4e4e7; --dark:#16161a; --side:#f6f6f7;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:#9a9a9a;font-family:"Pretendard",system-ui,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+  body{padding:26px;display:flex;justify-content:center}
+  .page{width:210mm;min-height:297mm;background:#fff;box-shadow:0 8px 40px rgba(0,0,0,.25);display:grid;grid-template-columns:62mm 1fr}
+
+  /* ---------- sidebar ---------- */
+  .side{background:var(--side);border-right:1px solid var(--line);padding:14mm 9mm}
+  .photo{width:100%;aspect-ratio:3/4;background:#ededf0;border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:16px}
+  .photo img{width:100%;height:100%;object-fit:cover}
+  .photo.empty::after{content:"PHOTO";font-size:11px;letter-spacing:.2em;color:#b4b4ba;font-weight:600}
+
+  .side h3{font-size:9.5px;font-weight:700;letter-spacing:.16em;color:var(--ink-3);margin:16px 0 8px}
+  .side h3:first-of-type{margin-top:0}
+  .cinfo{font-size:10.5px;line-height:1.7;color:var(--ink-2)}
+  .cinfo b{display:block;font-size:8.5px;letter-spacing:.1em;color:var(--ink-3);margin-top:6px}
+  .cinfo span{word-break:break-all}
+
+  .tools{display:grid;grid-template-columns:repeat(3,1fr);gap:10px 6px}
+  .tool{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center}
+  .tool img{width:24px;height:24px;object-fit:contain}
+  .tool span{font-size:8px;color:var(--ink-3);line-height:1.1;font-weight:600}
+
+  .sk{font-size:10px;line-height:1.55;color:var(--ink-2);margin-bottom:9px}
+  .sk b{display:block;font-size:9px;letter-spacing:.06em;color:var(--ink);font-weight:700;margin-bottom:2px}
+  .vibe{display:inline-block;background:var(--dark);color:#fff;font-size:8.5px;font-weight:700;
+    letter-spacing:.06em;padding:1px 6px;border-radius:2px;margin-bottom:3px}
+
+  /* ---------- main ---------- */
+  .main{padding:14mm 13mm}
+  .name{font-size:32px;font-weight:800;letter-spacing:-.02em;line-height:1}
+  .name span{font-size:12px;font-weight:600;color:var(--ink-3);letter-spacing:.18em;margin-left:8px}
+  .role{font-size:12px;color:var(--ink-2);margin-top:7px;font-weight:500;
+    border-bottom:2px solid var(--dark);padding-bottom:13px}
+
+  .main h2{font-size:10px;font-weight:700;letter-spacing:.16em;color:var(--ink-3);
+    display:flex;align-items:center;gap:9px;margin:17px 0 9px}
+  .main h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  .about{font-size:11.5px;line-height:1.6;color:var(--ink-2)}
+
+  .exp{display:flex;gap:12px}
+  .exp .when{font-size:10px;color:var(--ink-3);min-width:78px;padding-top:1px;font-weight:600}
+  .exp b{font-size:12.5px;font-weight:700}
+  .exp .sub{font-size:10px;color:var(--ink-3);font-weight:600;margin-left:6px}
+  .exp p{font-size:10.5px;color:var(--ink-2);line-height:1.5;margin-top:3px}
+
+  .zone{margin-bottom:11px}
+  .zlabel{font-size:9px;font-weight:700;letter-spacing:.1em;color:var(--dark);
+    background:#f0f0f2;padding:3px 8px;display:inline-block;margin-bottom:7px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:5px 22px}
+  .p{font-size:10.5px;line-height:1.4;padding-left:9px;border-left:2px solid var(--dark)}
+  .p b{font-weight:700}
+  .p i{font-style:normal;color:var(--ink-3)}
+
+  .foot{grid-column:1/-1;border-top:1px solid var(--line);margin:0 13mm;padding:8px 0 12px;
+    font-size:9px;color:var(--ink-3);display:flex;justify-content:space-between}
+
+  @media print{
+    @page{size:A4;margin:0}
+    html,body{background:#fff}
+    body{padding:0;display:block}
+    .page{width:100%;min-height:auto;box-shadow:none}
+    .side{padding:12mm 9mm}.main{padding:12mm 12mm}
+  }
+</style>
+</head>
+<body>
+  <main class="page">
+
+    <!-- SIDEBAR -->
+    <aside class="side">
+      <div class="photo empty">
+        <img src="./photo.jpg" alt="" onerror="this.style.display='none';this.parentNode.classList.add('empty')">
+      </div>
+
+      <h3>CONTACT</h3>
+      <div class="cinfo">
+        <b>EMAIL</b><span>kdhyun070714@gmail.com</span>
+        <b>PHONE</b><span>010-2064-6802</span>
+        <b>GITHUB</b><span>github.com/Swxp714</span>
+        <b>LOCATION</b><span>South Korea</span>
+      </div>
+
+      <h3>TOOLS</h3>
+      <div class="tools">
+        <div class="tool"><img src="./icons/tools/photoshop.svg" alt=""><span>Photoshop</span></div>
+        <div class="tool"><img src="./icons/tools/illustrator.svg" alt=""><span>Illustrator</span></div>
+        <div class="tool"><img src="./icons/tools/figma.svg" alt=""><span>Figma</span></div>
+        <div class="tool"><img src="./icons/tools/blender.svg" alt=""><span>Blender</span></div>
+        <div class="tool"><img src="./icons/tools/max3ds.svg" alt=""><span>3ds Max</span></div>
+        <div class="tool"><img src="./icons/tools/premiere.svg" alt=""><span>Premiere</span></div>
+      </div>
+
+      <h3>SKILLS</h3>
+      <div class="sk"><b>PLANNING</b>게임 기획 · 기획서/SSOT · 레벨 디자인 · UX 플로우</div>
+      <div class="sk"><b>DESIGN</b>디자인 시스템 · 아트 디렉팅 · UI 디자인</div>
+      <div class="sk"><b>CODING</b>C# (기본 문법)</div>
+      <div class="sk"><span class="vibe">VIBE CODING</span><br>React · TypeScript · Three.js/R3F · Unity · MediaPipe · Node·NestJS · Python · Swift · 멀티플레이(Colyseus·PartyKit·PeerJS)를 AI 협업으로 구현</div>
+      <div class="sk"><b>AI TOOLING</b>MCP 서버 제작 · Claude Code 워크플로우 · 서브에이전트 오케스트레이션</div>
+    </aside>
+
+    <!-- MAIN -->
+    <section class="main">
+      <div class="name">김대현 <span>KIM DAEHYUN</span></div>
+      <div class="role">기획 · 개발 올라운더 &nbsp;|&nbsp; Game Planner &amp; Interactive Developer</div>
+
+      <h2>ABOUT</h2>
+      <p class="about">게임 한 편을 <b>기획 → 개발 → 아트 → 출시</b>까지 혼자 끌고 가는 올라운더입니다. 웹캠·모션인식 인터랙티브 게임과 Web 3D가 주력이며, 디자인 역량과 AI 협업(바이브 코딩)을 결합해 아이디어를 빠르게 완성품으로 만듭니다.</p>
+
+      <h2>EXPERIENCE</h2>
+      <div class="exp">
+        <div class="when">게임 스타트업</div>
+        <div>
+          <b>검은토끼흰토끼</b><span class="sub">공동창업 · 아트 / 개발</span>
+          <p>웹캠 체감형 게임 ‘AIR DRIVE’의 아트 디렉션 · UI/UX · 파츠/전투 시스템 개발 담당. G-STAR 전시 빌드 제작 등 출시 준비 전반에 참여.</p>
+        </div>
+      </div>
+
+      <h2>PROJECTS</h2>
+
+      <div class="zone">
+        <span class="zlabel">▶ 게임 GAMES</span>
+        <div class="grid">
+          <div class="p"><b>AIRDRIVE</b> <i>— Unity 6 제트기 공중전(Steam)</i></div>
+          <div class="p"><b>Trans-Misson</b> <i>— 웹캠 RGB/CMY 색매칭 슈터(Unity)</i></div>
+          <div class="p"><b>blinkwatch</b> <i>— 웹캠 공포게임(Steam 목표)</i></div>
+          <div class="p"><b>Shadow Box</b> <i>— 모션인식 1v1 쉐도우복싱(웹)</i></div>
+          <div class="p"><b>Moto Stunt</b> <i>— 웹캠 손 그립 윌리 레이서(웹)</i></div>
+          <div class="p"><b>Mobile DM</b> <i>— 5v5 캐주얼 웹 FPS</i></div>
+          <div class="p"><b>Motion Race</b> <i>— 모션 컨트롤 3D 레이싱(웹)</i></div>
+          <div class="p"><b>FPPS</b> <i>— 브라우저 FPS + P2P 멀티</i></div>
+          <div class="p"><b>Wheelie Racer</b> <i>— 모션+키보드 스턴트 레이싱</i></div>
+        </div>
+      </div>
+
+      <div class="zone">
+        <span class="zlabel">▶ 웹사이트 WEBSITES</span>
+        <div class="grid">
+          <div class="p"><b>blacktokkiwhitetokki.com</b> <i>— 회사 공식 사이트(Firebase)</i></div>
+          <div class="p"><b>coreal.it</b> <i>— Coreal 스튜디오 사이트</i></div>
+        </div>
+      </div>
+
+      <div class="zone">
+        <span class="zlabel">▶ 유틸리티 UTILITIES</span>
+        <div class="grid">
+          <div class="p"><b>Discord Business Bot</b> <i>— 엔터프라이즈 봇 + 웹 대시보드</i></div>
+          <div class="p"><b>VideoEditHelper</b> <i>— 데스크탑 영상편집 유틸(PyQt5·ONNX)</i></div>
+          <div class="p"><b>Attendance Bot</b> <i>— 디스코드 출석 관리 + Flask</i></div>
+          <div class="p"><b>Startup Alert</b> <i>— 정부 창업지원금 자동 알림(FastAPI)</i></div>
+          <div class="p"><b>캘인원 Cal-in-One</b> <i>— 올인원 캘린더 iOS 앱</i></div>
+          <div class="p"><b>collab-board</b> <i>— 실시간 협업 화이트보드</i></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="foot">
+      <span>김대현 · KIM DAEHYUN</span>
+      <span>kdhyun070714@gmail.com · 010-2064-6802 · github.com/Swxp714</span>
+    </div>
+
+  </main>
+</body>
+</html>

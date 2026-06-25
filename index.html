@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>김대현 KimDaehyun — 기획·개발 올라운더</title>
+
+  <!-- Clean gothic (Pretendard) + pixel system font (Galmuri) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/quiple/galmuri/dist/galmuri.css" />
+  <!-- Font Awesome (no emoji) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <!-- CRT monitor overlay (scanlines · flicker · curvature) -->
+  <div class="crt" aria-hidden="true">
+    <div class="crt-scan"></div>
+    <div class="crt-roll"></div>
+    <div class="crt-vignette"></div>
+  </div>
+
+  <!-- Boot -->
+  <div id="boot">
+    <div class="boot-inner">
+      <p class="boot-brand">KDH<span class="cursor">_</span>OS</p>
+      <div class="boot-bar"><div class="boot-fill"></div></div>
+      <p class="boot-text">LOADING PORTFOLIO.SYS</p>
+    </div>
+  </div>
+
+  <main id="desktop">
+
+    <!-- Desktop icons -->
+    <section id="icons">
+      <button class="icon" data-open="about"><img class="ico" src="./icons/about.png" alt="" draggable="false"><span>ABOUT</span></button>
+      <button class="icon" data-open="projects"><img class="ico" src="./icons/projects.png" alt="" draggable="false"><span>PROJECTS</span></button>
+      <button class="icon" data-open="skills"><img class="ico" src="./icons/skills.png" alt="" draggable="false"><span>SKILLS</span></button>
+      <button class="icon" data-open="resume"><img class="ico" src="./icons/resume.png" alt="" draggable="false"><span>RESUME</span></button>
+      <button class="icon" data-open="contact"><img class="ico" src="./icons/contact.png" alt="" draggable="false"><span>CONTACT</span></button>
+    </section>
+
+    <!-- About -->
+    <article class="window" id="about" style="top:9%;left:6%;width:540px;z-index:10;display:none">
+      <header class="titlebar">
+        <span class="title">ABOUT.ME</span>
+        <span class="ctrls"><button class="mini" data-mini><i class="fa-solid fa-minus"></i></button><button class="close" data-close><i class="fa-solid fa-xmark"></i></button></span>
+      </header>
+      <div class="window-body about-body">
+        <div class="about-text">
+          <p class="overline">PORTFOLIO / 2026</p>
+          <h1 class="name">김대현</h1>
+          <p class="name-en">KIM DAEHYUN</p>
+          <p class="role">기획 · 개발 올라운더</p>
+          <p class="muted">Game Planner &amp; Interactive Developer</p>
+          <ul class="kv">
+            <li><span class="k">EMAIL</span><span class="v">kdhyun070714@gmail.com</span></li>
+            <li><span class="k">PHONE</span><span class="v">010-2064-6802</span></li>
+            <li><span class="k">BASE</span><span class="v">South Korea</span></li>
+            <li><span class="k">GITHUB</span><a class="v" href="https://github.com/Swxp714" target="_blank" rel="noopener">@Swxp714</a></li>
+          </ul>
+        </div>
+        <div class="about-side">
+          <div class="avatar"><img src="./icons/game1.png" alt="" draggable="false"></div>
+          <p class="hint">기획서부터 개발 · 아트까지<br/>혼자 끝까지 굴립니다.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Skills -->
+    <article class="window" id="skills" style="top:30%;left:9%;width:480px;z-index:9;display:none">
+      <header class="titlebar">
+        <span class="title">SKILLS.SYS</span>
+        <span class="ctrls"><button class="mini" data-mini><i class="fa-solid fa-minus"></i></button><button class="close" data-close><i class="fa-solid fa-xmark"></i></button></span>
+      </header>
+      <div class="window-body">
+        <div class="skill-group">
+          <p class="overline">PLANNING</p>
+          <div class="chips"><span>게임 기획</span><span>기획서 / SSOT</span><span>레벨 디자인</span><span>UX 플로우</span></div>
+        </div>
+        <div class="skill-group">
+          <p class="overline">CODING</p>
+          <div class="chips"><span>C# (기본 문법)</span></div>
+        </div>
+        <div class="skill-group">
+          <p class="overline">VIBE CODING — AI 협업 구현</p>
+          <div class="chips"><span>React</span><span>TypeScript</span><span>Three.js / R3F</span><span>Rapier</span><span>Unity</span><span>MediaPipe</span><span>Swift · SwiftUI</span><span>Node · NestJS</span><span>Python · FastAPI</span><span>Colyseus · PartyKit · PeerJS</span><span>Steamworks</span><span>Firebase · Supabase</span></div>
+        </div>
+        <div class="skill-group">
+          <p class="overline">DESIGN</p>
+          <div class="chips"><span>디자인 시스템</span><span>아트 디렉팅</span><span>UI 디자인</span></div>
+        </div>
+        <div class="skill-group">
+          <p class="overline">TOOLS</p>
+          <div class="tool-icons">
+            <img src="./icons/tools/photoshop.svg" title="Photoshop" alt="Photoshop" draggable="false">
+            <img src="./icons/tools/illustrator.svg" title="Illustrator" alt="Illustrator" draggable="false">
+            <img src="./icons/tools/figma.svg" title="Figma" alt="Figma" draggable="false">
+            <img src="./icons/tools/blender.svg" title="Blender" alt="Blender" draggable="false">
+            <img src="./icons/tools/max3ds.svg" title="3ds Max" alt="3ds Max" draggable="false">
+            <img src="./icons/tools/premiere.svg" title="Premiere Pro" alt="Premiere Pro" draggable="false">
+          </div>
+        </div>
+        <div class="skill-group">
+          <p class="overline">AI TOOLING</p>
+          <div class="chips"><span>MCP 서버 제작</span><span>Claude Code 워크플로우</span><span>서브에이전트 오케스트레이션</span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Projects -->
+    <article class="window" id="projects" style="top:11%;left:42%;width:600px;z-index:11;display:none">
+      <header class="titlebar">
+        <span class="title">PROJECTS — EXPLORER</span>
+        <span class="ctrls"><button class="mini" data-mini><i class="fa-solid fa-minus"></i></button><button class="close" data-close><i class="fa-solid fa-xmark"></i></button></span>
+      </header>
+      <div class="window-body">
+        <div class="proj-grid" id="projGrid"></div>
+      </div>
+    </article>
+
+    <!-- Resume -->
+    <article class="window" id="resume" style="top:10%;left:24%;width:620px;z-index:8;display:none">
+      <header class="titlebar">
+        <span class="title">RESUME.PDF</span>
+        <span class="ctrls"><button class="print" data-print title="인쇄"><i class="fa-solid fa-print"></i></button><button class="mini" data-mini><i class="fa-solid fa-minus"></i></button><button class="close" data-close><i class="fa-solid fa-xmark"></i></button></span>
+      </header>
+      <div class="window-body resume-body" id="resumeSheet">
+        <a class="clean-link" href="./resume.html" target="_blank" rel="noopener">▣ 깔끔 1페이지 PDF 버전 열기 →</a>
+        <div class="resume-head">
+          <p class="overline">CURRICULUM VITAE</p>
+          <h1>김대현 <span>KIM DAEHYUN</span></h1>
+          <p class="resume-role">기획 · 개발 올라운더 — Game Planner &amp; Interactive Developer</p>
+          <p class="resume-contact">kdhyun070714@gmail.com &nbsp;·&nbsp; 010-2064-6802 &nbsp;·&nbsp; github.com/Swxp714 &nbsp;·&nbsp; South Korea</p>
+        </div>
+        <div class="resume-sec">
+          <h2>ABOUT</h2>
+          <p>게임 한 편을 기획서 → 개발 → 아트 → 출시까지 혼자 끌고 가는 올라운더. 웹캠 · 모션인식 기반 인터랙티브 게임과 Web 3D를 주력으로 합니다.</p>
+        </div>
+        <div class="resume-sec">
+          <h2>EXPERIENCE</h2>
+          <ul>
+            <li><b>검은토끼흰토끼 (게임 스타트업)</b> — 공동창업 · 아트 / 개발<br/><span>웹캠 체감형 게임 ‘AIR DRIVE’의 아트 디렉션 · UI/UX · 게임 시스템 개발 담당. G-STAR 전시 빌드 제작 등 출시 준비 전반에 참여.</span></li>
+          </ul>
+        </div>
+        <div class="resume-sec">
+          <h2>SELECTED PROJECTS</h2>
+          <ul id="resumeProjects"></ul>
+        </div>
+        <div class="resume-sec">
+          <h2>SKILLS</h2>
+          <p>기획서 / SSOT · 게임 기획 · TypeScript · React · Three.js / R3F · Unity 6 · C# · MediaPipe · 멀티플레이(Colyseus · PartyKit) · Node · NestJS · Python · FastAPI · 디자인 시스템 · Photoshop</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Contact -->
+    <article class="window" id="contact" style="top:42%;left:46%;width:440px;z-index:7;display:none">
+      <header class="titlebar">
+        <span class="title">CONTACT.EXE</span>
+        <span class="ctrls"><button class="mini" data-mini><i class="fa-solid fa-minus"></i></button><button class="close" data-close><i class="fa-solid fa-xmark"></i></button></span>
+      </header>
+      <div class="window-body contact-body">
+        <p class="contact-lead">같이 재밌는 거 만들어요.</p>
+        <a class="link-btn" href="mailto:kdhyun070714@gmail.com"><i class="fa-solid fa-envelope"></i> kdhyun070714@gmail.com</a>
+        <a class="link-btn" href="tel:01020646802"><i class="fa-solid fa-phone"></i> 010-2064-6802</a>
+        <a class="link-btn" href="https://github.com/Swxp714" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> github.com/Swxp714</a>
+      </div>
+    </article>
+
+    <!-- Project detail -->
+    <article class="window" id="projDetail" style="top:18%;left:30%;width:540px;display:none;z-index:20">
+      <header class="titlebar">
+        <span class="title" id="pdTitle">PROJECT</span>
+        <span class="ctrls"><button class="mini" data-mini><i class="fa-solid fa-minus"></i></button><button class="close" data-close><i class="fa-solid fa-xmark"></i></button></span>
+      </header>
+      <div class="window-body" id="pdBody"></div>
+    </article>
+
+    <!-- Taskbar -->
+    <footer id="taskbar">
+      <button id="startBtn"><img src="./icons/start.png" class="start-ico" alt="" draggable="false"> START</button>
+      <div id="taskItems"></div>
+      <div id="clock">--:--</div>
+    </footer>
+  </main>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
